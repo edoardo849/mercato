@@ -16,7 +16,7 @@ type GroceryStore struct {
 	Total    utilities.Price `json:"total"`
 }
 
-// NewGroceryStore Loop throug every item with a goRoutine
+// NewGroceryStore Loop through every item with a goRoutine
 func NewGroceryStore() *GroceryStore {
 
 	g := new(GroceryStore)

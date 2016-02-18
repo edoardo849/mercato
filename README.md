@@ -7,6 +7,8 @@ Mercato is a console application that will scrape a grocery store's web page and
 This task could be completed with PHP, Java or Go. However, I have chosen Go because of the possibility to run every scrape request as a concurrent goroutine, thus augmenting the response time.
 
 ### Notes
+
+#### Description on the product page
 When I am required to
 
 >follow each link and get the size (in kb) of the linked HTML (no assets)
@@ -18,6 +20,13 @@ For example: http://hiring-tests.s3-website-eu-west-1.amazonaws.com/2015_Develop
 Description: "Avocados" (aka: first instance of `".productText"`)
 
 I have chosen to grab only that description: if it's required to grab the whole "Info" page I can quickly modify the code.
+
+#### GoRoutines order
+When we are scraping the store's page, the order of each product in the final JSON object *will not* be the same as the order of appearance on the page. This is because of the GoRoutine's concurrency: the actual order will probably be determined by the responsiveness of the queried page.
+
+If the order of the products in the final JSON object should be the same as the one of the grocery store page, it will be necessary to add an `order` param on the struct `sainsburys.Product` and then implement an order `func` afterwards.
+
+Because of time restraints, this has been left out.
 
 ## Dependencies
 - `go` installed and `GOPATH` variable well set up. For more info visit  [Go's documentation](https://golang.org/doc/code.html#GOPATH)
