@@ -6,6 +6,8 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/PuerkitoBio/goquery"
+
 	"../scraper"
 	"../utilities"
 )
@@ -38,7 +40,16 @@ func NewProduct(title string, price string, url string) *Product {
 }
 
 func (p *Product) getDescription(pPage *scraper.Scraper) string {
-	return strings.TrimSpace(pPage.Find(".productText").First().Text())
+	d := ""
+
+	pPage.Find("meta").Each(func(i int, s *goquery.Selection) {
+		if name, _ := s.Attr("name"); name == "description" {
+			description, _ := s.Attr("content")
+			d = description
+		}
+	})
+
+	return strings.TrimSpace(d)
 }
 
 func (p *Product) getUnitPrice(price string) utilities.Price {
