@@ -13,7 +13,7 @@ func main() {
 }
 
 // GroceryStore is the function that will
-// scrap the Sainsbury's Grocery store page
+// scrape the Sainsbury's Grocery store page
 // and return a JSON string of the items
 func GroceryStore() string {
 	s := sainsburys.NewGroceryStore()
