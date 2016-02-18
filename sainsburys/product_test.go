@@ -16,7 +16,7 @@ func TestProduct(t *testing.T) {
 		t.Error("The price cannot be a negative number")
 	}
 
-	if p.Description != "Avocados" {
+	if p.Description != "Buy Sainsbury's Avocado Ripe & Ready XL Loose 300g online from Sainsbury's, the same great quality, freshness and choice you'd find in store. Choose from 1 hour delivery slots and collect Nectar points." {
 		t.Error("The description does not correspond to the one at the remote page")
 	}
 
