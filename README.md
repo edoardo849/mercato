@@ -2,7 +2,7 @@ Mercato: a Sainsbury's Scraper in Go
 =====
 
 ## Logic
-Mercato is a console application that will scrape a grocery store's web page and grab every product's url children page for additional information.
+Mercato is a console application intended to scrape a Saynsbury's test page and grab every product's url children page for additional information.
 
 This task could be completed with PHP, Java or Go. However, I have chosen Go because of the possibility to run every scrape request as a concurrent goroutine, thus augmenting the response time.
 
