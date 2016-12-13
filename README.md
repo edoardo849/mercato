@@ -3,8 +3,7 @@ Mercato: a Sainsbury's Scraper in Go
 
 
 # DISCLAIMER :warning:
-*Please be aware that Sainsbury's code reviewers are aware of this project and will compare it against your submission. Take inspiration if you want, but don't copy it: be creative! :-)*
-
+*Please be aware that Sainsbury's code reviewers are aware of this project and could compare it against your submission. Take inspiration if you want, but don't copy it: be creative instead! :-)*
 
 ## Logic
 Mercato is a console application intended to scrape a Saynsbury's test page and grab every product's url children page for additional information.
