@@ -1,6 +1,13 @@
 Mercato: a Sainsbury's Scraper in Go
 =====
 
+
+=====
+
+WARNING!! Please be aware that Sainsbury's code reviewers are aware of this project and will compare it against your submission. Take inspiration if you want, but don't copy it: be creative! :-)
+
+====
+
 ## Logic
 Mercato is a console application intended to scrape a Saynsbury's test page and grab every product's url children page for additional information.
 
@@ -42,20 +49,20 @@ go run main.go
 
 ```json
 {
-   "results":[
-      {
-         "title":"Sainsbury's Apricot Ripe & Ready x5",
-         "size":"38.27kb",
-         "unit_price":3.50,
-         "description":"Buy Sainsbury's Apricot Ripe & Ready x5 online from Sainsbury's, the same great quality, freshness and choice you'd find in store. Choose from 1 hour delivery slots and collect Nectar points."
-      },
-      {
-         "title":"Sainsbury's Golden Kiwi x4",
-         "size":"38.56kb",
-         "unit_price":1.80,
-         "description":"Buy Sainsbury's Golden Kiwi x4 online from Sainsbury's, the same great quality, freshness and choice you'd find in store. Choose from 1 hour delivery slots and collect Nectar points."
-      }
-   ],
-   "total":15.10
+	"results":[
+	{
+		"title":"Sainsbury's Apricot Ripe & Ready x5",
+			"size":"38.27kb",
+			"unit_price":3.50,
+			"description":"Buy Sainsbury's Apricot Ripe & Ready x5 online from Sainsbury's, the same great quality, freshness and choice you'd find in store. Choose from 1 hour delivery slots and collect Nectar points."
+	},
+	{
+		"title":"Sainsbury's Golden Kiwi x4",
+		"size":"38.56kb",
+		"unit_price":1.80,
+		"description":"Buy Sainsbury's Golden Kiwi x4 online from Sainsbury's, the same great quality, freshness and choice you'd find in store. Choose from 1 hour delivery slots and collect Nectar points."
+	}
+	],
+	"total":15.10
 }
 ```
